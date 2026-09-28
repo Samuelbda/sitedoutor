@@ -1,6 +1,6 @@
 import React from 'react';
 import { candidateData } from '../data/candidate';
-import { ArrowUpRight, MessageSquare, ChevronRight } from 'lucide-react';
+import { MessageSquare, ChevronRight } from 'lucide-react';
 
 export const FinalCTA: React.FC = () => {
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
