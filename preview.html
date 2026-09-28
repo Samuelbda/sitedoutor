@@ -27,7 +27,8 @@
               navy: '#0B2B60',
               dark: '#061A3B',
               light: '#164A96',
-              accent: '#0284C7',
+              yellow: '#F59E0B',
+              yellowHover: '#D97706',
               bg: '#F8FAFC'
             }
           },
@@ -49,6 +50,30 @@
     .font-display {
       font-family: 'Outfit', sans-serif;
     }
+    .btn-yellow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #F59E0B;
+      color: #061A3B;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.75rem;
+      border: 1px solid #F59E0B;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+      cursor: pointer;
+    }
+    .btn-yellow:hover {
+      background-color: #D97706;
+      border-color: #D97706;
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
+    }
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -61,7 +86,7 @@
       padding: 0.85rem 1.75rem;
       border-radius: 0.75rem;
       text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s;
       box-shadow: 0 4px 14px rgba(11, 43, 96, 0.25);
       cursor: pointer;
     }
@@ -83,7 +108,7 @@
       border-radius: 0.75rem;
       border: 1.5px solid #E2E8F0;
       text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s;
       cursor: pointer;
     }
     .btn-secondary:hover {
@@ -98,14 +123,15 @@
       gap: 0.5rem;
       background-color: #FFFFFF;
       color: #0B2B60;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.95rem;
       padding: 0.85rem 1.75rem;
       border-radius: 0.75rem;
       transition: all 0.2s;
     }
     .btn-white:hover {
-      background-color: #F8FAFC;
+      background-color: #FEF3C7;
+      color: #061A3B;
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
@@ -124,8 +150,9 @@
       transition: all 0.2s;
     }
     .btn-outline-white:hover {
-      border-color: #FFFFFF;
-      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #F59E0B;
+      color: #FDE68A;
+      background-color: rgba(245, 158, 11, 0.1);
       transform: translateY(-2px);
     }
   </style>
@@ -135,20 +162,20 @@
   <!-- ========================================== -->
   <!-- HEADER FIXO NO TOPO                       -->
   <!-- ========================================== -->
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200/80 py-3.5">
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3.5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       
       <!-- LOGO / NOME MAYCON MATOS -->
       <a href="#inicio" class="flex items-center gap-3 text-decoration-none group">
-        <div class="w-10 h-10 rounded-lg bg-[#0B2B60] text-white flex items-center justify-center font-display font-extrabold text-lg shadow-sm group-hover:bg-[#164A96] transition-colors">
+        <div class="w-10 h-10 rounded-lg bg-[#0B2B60] text-amber-400 flex items-center justify-center font-display font-extrabold text-lg shadow-sm group-hover:bg-[#164A96] transition-colors border border-amber-400/40">
           MM
         </div>
         <div class="flex flex-col">
           <div class="flex items-center gap-2">
-            <span class="font-display font-black text-lg sm:text-xl tracking-tight text-slate-900 leading-none">
+            <span class="font-display font-black text-lg sm:text-xl tracking-tight text-[#0B2B60] leading-none">
               MAYCON MATOS
             </span>
-            <span class="bg-blue-100 text-[#0B2B60] text-xs font-bold px-2 py-0.5 rounded-full border border-blue-200">
+            <span class="bg-amber-100 text-[#0B2B60] text-xs font-black px-2.5 py-0.5 rounded-full border border-amber-300">
               REPUBLICANOS
             </span>
           </div>
@@ -168,24 +195,24 @@
         </ul>
 
         <!-- BOTÃO COPIAR NÚMERO -->
-        <button onclick="copyNumber()" id="copy-badge" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#0B2B60] border border-slate-200 text-xs font-bold transition-all">
-          <span class="text-slate-500">Nº</span>
-          <span class="text-[#0B2B60] font-extrabold text-sm">1078</span>
-          <i data-lucide="copy" class="w-3.5 h-3.5 text-slate-400"></i>
+        <button onclick="copyNumber()" id="copy-badge" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-[#0B2B60] border border-amber-300 text-xs font-black transition-all">
+          <span class="text-amber-700 font-bold">Nº</span>
+          <span class="text-[#0B2B60] font-black text-sm">1078</span>
+          <i data-lucide="copy" class="w-3.5 h-3.5 text-amber-700"></i>
         </button>
 
-        <!-- BOTÃO DESTACADO: CONHEÇA AS PROPOSTAS -->
-        <a href="#propostas" class="btn-primary text-xs py-2.5 px-5 tracking-wider">
+        <!-- BOTÃO DESTACADO: CONHEÇA AS PROPOSTAS (AMARELO OURO) -->
+        <a href="#propostas" class="btn-yellow text-xs py-2.5 px-5 tracking-wider font-black">
           <span>CONHEÇA AS PROPOSTAS</span>
-          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#061A3B]"></i>
         </a>
       </nav>
 
       <!-- MENU HAMBURGER MOBILE -->
       <div class="flex items-center gap-2 lg:hidden">
-        <button onclick="copyNumber()" class="flex items-center gap-1 px-2.5 py-1.5 rounded-md bg-blue-50 text-[#0B2B60] border border-blue-200 text-xs font-bold">
+        <button onclick="copyNumber()" class="flex items-center gap-1 px-2.5 py-1.5 rounded-md bg-amber-100 text-[#0B2B60] border border-amber-300 text-xs font-black">
           <span>Nº</span>
-          <span class="font-extrabold">1078</span>
+          <span class="font-black">1078</span>
         </button>
         <button onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-700 hover:bg-slate-100" aria-label="Menu">
           <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
@@ -197,12 +224,12 @@
     <!-- MENU MOBILE DROPDOWN -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-6 shadow-xl">
       <nav class="flex flex-col gap-3">
-        <a href="#inicio" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-blue-50 hover:text-[#0B2B60]">INÍCIO</a>
-        <a href="#sobre" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-blue-50 hover:text-[#0B2B60]">SOBRE</a>
-        <a href="#propostas" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-blue-50 hover:text-[#0B2B60]">PROPOSTAS</a>
-        <a href="#contato" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-blue-50 hover:text-[#0B2B60]">CONTATO</a>
+        <a href="#inicio" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-amber-50 hover:text-[#0B2B60]">INÍCIO</a>
+        <a href="#sobre" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-amber-50 hover:text-[#0B2B60]">SOBRE</a>
+        <a href="#propostas" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-amber-50 hover:text-[#0B2B60]">PROPOSTAS</a>
+        <a href="#contato" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-amber-50 hover:text-[#0B2B60]">CONTATO</a>
         <div class="pt-3 border-t border-slate-100">
-          <a href="#propostas" onclick="toggleMobileMenu()" class="btn-primary w-full text-center justify-center py-3">
+          <a href="#propostas" onclick="toggleMobileMenu()" class="btn-yellow w-full text-center justify-center py-3 font-black">
             CONHEÇA AS PROPOSTAS
           </a>
         </div>
@@ -215,58 +242,58 @@
     <!-- SEÇÃO HERO                                 -->
     <!-- ========================================== -->
     <section id="inicio" class="relative pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-44 lg:pb-28 overflow-hidden">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-      <div class="absolute bottom-10 left-0 w-80 h-80 bg-slate-200/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-amber-200/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      <div class="absolute bottom-10 left-0 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           <!-- TEXTO À ESQUERDA -->
           <div class="lg:col-span-7 flex flex-col items-start text-left">
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm mb-6">
-              <span class="w-2.5 h-2.5 rounded-full bg-[#0B2B60]"></span>
-              <span class="text-xs font-bold text-[#0B2B60] tracking-wide uppercase">REPUBLICANOS</span>
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-amber-300 shadow-sm mb-6">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <span class="text-xs font-black text-[#0B2B60] tracking-wide uppercase">REPUBLICANOS</span>
               <span class="text-slate-300">•</span>
-              <span class="text-xs font-semibold text-slate-600">Minas Gerais</span>
+              <span class="text-xs font-bold text-slate-700">Minas Gerais</span>
             </div>
 
-            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.08] mb-4">
+            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-black text-[#0B2B60] tracking-tight leading-[1.08] mb-4">
               MAYCON MATOS
             </h1>
 
             <div class="text-xl sm:text-2xl md:text-3xl font-bold text-[#0B2B60] mb-6 flex flex-wrap items-center gap-2">
               <span>Candidato a Deputado Federal</span>
               <span class="text-slate-400 font-light">por</span>
-              <span class="text-slate-800 underline decoration-blue-400 decoration-2 underline-offset-4">Minas Gerais</span>
+              <span class="text-slate-900 underline decoration-amber-400 decoration-4 underline-offset-6">Minas Gerais</span>
             </div>
 
-            <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed mb-8 max-w-2xl bg-white/70 p-4 sm:p-5 rounded-xl border border-slate-200/60 shadow-sm">
+            <p class="text-base sm:text-lg text-slate-700 font-normal leading-relaxed mb-8 max-w-2xl bg-white/80 p-4 sm:p-5 rounded-xl border border-slate-200 shadow-sm">
               "Uma candidatura voltada à defesa dos direitos previdenciários e assistenciais e à representação dos mineiros."
             </p>
 
-            <!-- DESTAQUE VISUAL 1078 -->
-            <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-white rounded-2xl border border-slate-200/80 shadow-md mb-8">
+            <!-- DESTAQUE VISUAL 1078 (AZUL & AMARELO) -->
+            <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-white rounded-2xl border-2 border-amber-300 shadow-md mb-8">
               <div class="flex items-center gap-3">
                 <div class="flex flex-col">
-                  <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Número de Urna</span>
-                  <span class="text-xs font-bold text-[#0B2B60]">REPUBLICANOS</span>
+                  <span class="text-[11px] font-extrabold text-amber-700 uppercase tracking-wider">Número de Urna</span>
+                  <span class="text-xs font-black text-[#0B2B60]">REPUBLICANOS</span>
                 </div>
-                <div class="bg-[#0B2B60] text-white px-5 py-2 rounded-xl font-display font-black text-3xl sm:text-4xl tracking-wider shadow-inner">
+                <div class="bg-[#0B2B60] text-amber-400 px-5 py-2 rounded-xl font-display font-black text-3xl sm:text-4xl tracking-wider shadow-inner border border-amber-400/40">
                   1078
                 </div>
               </div>
 
               <div class="h-px sm:h-10 sm:w-px bg-slate-200 my-1 sm:my-0"></div>
 
-              <button onclick="copyNumber()" class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-50 hover:bg-blue-50 text-slate-700 hover:text-[#0B2B60] border border-slate-200 text-xs font-bold transition-all">
-                <i data-lucide="copy" class="w-4 h-4 text-slate-500"></i>
+              <button onclick="copyNumber()" class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-[#0B2B60] border border-amber-300 text-xs font-bold transition-all">
+                <i data-lucide="copy" class="w-4 h-4 text-amber-700"></i>
                 <span id="copy-text">Copiar número</span>
               </button>
             </div>
 
             <!-- BOTÕES PRINCIPAL E SECUNDÁRIO -->
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
-              <a href="#propostas" class="btn-primary py-3.5 px-7 text-sm font-extrabold text-center justify-center">
+              <a href="#propostas" class="btn-yellow py-3.5 px-7 text-sm font-black text-center justify-center shadow-lg">
                 <span>CONHEÇA MINHAS PROPOSTAS</span>
                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
               </a>
@@ -276,9 +303,9 @@
               </a>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-slate-200/80 w-full flex flex-wrap gap-4 text-xs font-semibold text-slate-500">
+            <div class="mt-8 pt-6 border-t border-slate-200/80 w-full flex flex-wrap gap-4 text-xs font-bold text-slate-600">
               <div class="flex items-center gap-1.5">
-                <i data-lucide="shield" class="w-4 h-4 text-[#0B2B60]"></i>
+                <i data-lucide="shield" class="w-4 h-4 text-amber-500"></i>
                 <span>Defesa Previdenciária & BPC</span>
               </div>
               <div class="flex items-center gap-1.5">
@@ -291,15 +318,15 @@
           <!-- FOTO DO CANDIDATO À DIREITA -->
           <div class="lg:col-span-5 flex justify-center lg:justify-end">
             <div class="relative w-full max-w-md">
-              <div class="absolute -inset-2 bg-gradient-to-tr from-[#0B2B60]/10 to-blue-200/30 rounded-3xl transform -rotate-1 -z-10"></div>
-              <div class="relative bg-white p-3 rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden">
+              <div class="absolute -inset-2 bg-gradient-to-tr from-[#0B2B60]/20 via-amber-300/30 to-blue-200/40 rounded-3xl transform -rotate-1 -z-10"></div>
+              <div class="relative bg-white p-3 rounded-2xl border-2 border-amber-300/70 shadow-xl overflow-hidden">
                 <img src="./public/images/maycon-matos.jpg" onerror="this.src='./images/maycon-matos.jpg'" alt="Maycon Matos - Candidato a Deputado Federal" class="w-full h-[420px] sm:h-[480px] lg:h-[500px] object-cover object-top rounded-xl" />
-                <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200 shadow-lg flex items-center justify-between">
+                <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-amber-200 shadow-lg flex items-center justify-between">
                   <div class="flex flex-col">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">REPUBLICANOS</span>
-                    <span class="font-bold text-slate-900 text-sm">Maycon Pereira de Matos</span>
+                    <span class="text-[10px] font-black text-amber-700 uppercase tracking-wider">REPUBLICANOS</span>
+                    <span class="font-extrabold text-[#0B2B60] text-sm">Maycon Pereira de Matos</span>
                   </div>
-                  <div class="bg-[#0B2B60] text-white px-3 py-1 rounded-lg font-display font-extrabold text-base">
+                  <div class="bg-[#0B2B60] text-amber-400 px-3 py-1 rounded-lg font-display font-black text-base border border-amber-400/40">
                     1078
                   </div>
                 </div>
@@ -312,9 +339,9 @@
         <!-- ROLAR PARA PRÓXIMA SEÇÃO -->
         <div class="mt-14 lg:mt-16 flex justify-center">
           <a href="#sobre" class="group flex flex-col items-center gap-1.5 text-slate-400 hover:text-[#0B2B60] transition-colors">
-            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Conheça a trajetória</span>
-            <div class="w-8 h-8 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center group-hover:border-[#0B2B60]">
-              <i data-lucide="arrow-down" class="w-4 h-4 text-slate-500 group-hover:text-[#0B2B60]"></i>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-600">Conheça a trajetória</span>
+            <div class="w-8 h-8 rounded-full border border-amber-300 bg-amber-50 shadow-sm flex items-center justify-center group-hover:bg-amber-100">
+              <i data-lucide="arrow-down" class="w-4 h-4 text-[#0B2B60] group-hover:translate-y-0.5 transition-transform"></i>
             </div>
           </a>
         </div>
@@ -328,63 +355,63 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-3xl mx-auto text-center mb-14 md:mb-18">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0B2B60] text-xs font-bold uppercase tracking-wider mb-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
             <span>Trajetória e Perfil</span>
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2B60] tracking-tight">
             QUEM É MAYCON MATOS?
           </h2>
-          <div class="w-16 h-1 bg-[#0B2B60] mx-auto mt-4 rounded-full"></div>
+          <div class="w-16 h-1.5 bg-amber-400 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div class="lg:col-span-5">
-            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 shadow-md max-w-sm mx-auto lg:max-w-none">
+            <div class="bg-slate-50 p-4 rounded-2xl border-2 border-amber-200 shadow-md max-w-sm mx-auto lg:max-w-none">
               <img src="./public/images/maycon-matos.jpg" onerror="this.src='./images/maycon-matos.jpg'" alt="Maycon Pereira de Matos" class="w-full h-80 sm:h-96 object-cover object-top rounded-xl" />
-              <div class="mt-4 p-3.5 bg-white rounded-xl border border-slate-100 text-center">
-                <span class="font-display font-bold text-slate-800 text-base block">Maycon Pereira de Matos</span>
-                <span class="text-xs text-slate-500 font-medium">Advogado • Teófilo Otoni — MG</span>
+              <div class="mt-4 p-3.5 bg-white rounded-xl border border-amber-200 text-center">
+                <span class="font-display font-bold text-[#0B2B60] text-base block">Maycon Pereira de Matos</span>
+                <span class="text-xs text-slate-500 font-bold">Advogado • Teófilo Otoni — MG</span>
               </div>
             </div>
           </div>
 
           <div class="lg:col-span-7 flex flex-col items-start">
             <div class="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
-              <p class="bg-slate-50/70 p-4 rounded-xl border border-slate-100">
+              <p className="bg-slate-50/80 p-4 rounded-xl border border-slate-200">
                 Maycon Pereira de Matos é advogado, natural de Teófilo Otoni, Minas Gerais, e atua especialmente em questões relacionadas ao INSS, BPC e direitos previdenciários e assistenciais.
               </p>
-              <p class="bg-slate-50/70 p-4 rounded-xl border border-slate-100">
+              <p className="bg-slate-50/80 p-4 rounded-xl border border-slate-200">
                 Sua candidatura apresenta como uma de suas pautas a defesa de beneficiários e famílias que dependem de políticas de proteção social.
               </p>
             </div>
 
             <div class="w-full mb-8">
-              <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Informações Institucionais</h3>
+              <h3 class="text-xs font-black text-amber-700 uppercase tracking-wider mb-3">Informações Institucionais</h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:border-amber-300">
                   <span class="text-[11px] font-bold text-slate-400 uppercase block mb-1">NOME</span>
-                  <span class="font-bold text-slate-800 text-sm">Maycon Pereira de Matos</span>
+                  <span class="font-black text-[#0B2B60] text-sm">Maycon Pereira de Matos</span>
                 </div>
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:border-amber-300">
                   <span class="text-[11px] font-bold text-slate-400 uppercase block mb-1">PROFISSÃO</span>
-                  <span class="font-bold text-slate-800 text-sm">Advogado</span>
+                  <span class="font-black text-[#0B2B60] text-sm">Advogado</span>
                 </div>
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:border-amber-300">
                   <span class="text-[11px] font-bold text-slate-400 uppercase block mb-1">NATURALIDADE</span>
-                  <span class="font-bold text-slate-800 text-sm">Teófilo Otoni — MG</span>
+                  <span class="font-black text-[#0B2B60] text-sm">Teófilo Otoni — MG</span>
                 </div>
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:border-amber-300">
                   <span class="text-[11px] font-bold text-slate-400 uppercase block mb-1">CARGO</span>
-                  <span class="font-bold text-slate-800 text-sm">Deputado Federal</span>
+                  <span class="font-black text-[#0B2B60] text-sm">Deputado Federal</span>
                 </div>
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 sm:col-span-2 md:col-span-2">
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 sm:col-span-2 md:col-span-2 hover:border-amber-300">
                   <span class="text-[11px] font-bold text-slate-400 uppercase block mb-1">PARTIDO</span>
-                  <span class="font-bold text-slate-800 text-sm">REPUBLICANOS</span>
+                  <span class="font-black text-[#0B2B60] text-sm">REPUBLICANOS</span>
                 </div>
               </div>
             </div>
 
-            <a href="#propostas" class="btn-primary py-3 px-6 text-sm font-bold">
+            <a href="#propostas" class="btn-yellow py-3 px-6 text-sm font-black">
               <span>CONHEÇA AS PROPOSTAS</span>
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </a>
@@ -401,101 +428,101 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-3xl mx-auto text-center mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-200 text-[#0B2B60] text-xs font-bold uppercase tracking-wider mb-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
             <span>Pautas e Compromissos</span>
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2B60] tracking-tight mb-4">
             PRINCIPAIS PROPOSTAS
           </h2>
-          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto">
+          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto font-medium">
             Conheça algumas das pautas apresentadas por Maycon Matos.
           </p>
-          <div class="w-16 h-1 bg-[#0B2B60] mx-auto mt-4 rounded-full"></div>
+          <div class="w-16 h-1.5 bg-amber-400 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           
           <!-- CARD 1 -->
-          <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="bg-white border-2 border-slate-200 hover:border-amber-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-5">
-                <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0B2B60]">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#0B2B60]">
                   <i data-lucide="heart-handshake" class="w-6 h-6"></i>
                 </div>
-                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">Pauta 01</span>
+                <span class="text-xs font-extrabold text-[#0B2B60] bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">Pauta 01</span>
               </div>
-              <span class="text-[11px] font-bold uppercase tracking-wider text-[#0284C7] block mb-1">Cuidado e Família</span>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0B2B60] transition-colors">AUXÍLIO-CUIDADOR</h3>
+              <span class="text-[11px] font-black uppercase tracking-wider text-amber-700 block mb-1">Cuidado e Família</span>
+              <h3 class="font-display text-xl font-extrabold text-[#0B2B60] mb-3 group-hover:text-amber-600 transition-colors">AUXÍLIO-CUIDADOR</h3>
               <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                 Defesa da criação de um auxílio no valor de um salário mínimo mensal destinado a cuidadores de idosos doentes e mães e pais atípicos.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-400">
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
               <span>Compromisso com MG</span>
-              <span class="text-[#0B2B60] font-extrabold">1078</span>
+              <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-black">1078</span>
             </div>
           </div>
 
           <!-- CARD 2 -->
-          <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="bg-white border-2 border-slate-200 hover:border-amber-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-5">
-                <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0B2B60]">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#0B2B60]">
                   <i data-lucide="shield-check" class="w-6 h-6"></i>
                 </div>
-                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">Pauta 02</span>
+                <span class="text-xs font-extrabold text-[#0B2B60] bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">Pauta 02</span>
               </div>
-              <span class="text-[11px] font-bold uppercase tracking-wider text-[#0284C7] block mb-1">Proteção Social</span>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0B2B60] transition-colors">DEFESA DO BPC</h3>
+              <span class="text-[11px] font-black uppercase tracking-wider text-amber-700 block mb-1">Proteção Social</span>
+              <h3 class="font-display text-xl font-extrabold text-[#0B2B60] mb-3 group-hover:text-amber-600 transition-colors">DEFESA DO BPC</h3>
               <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                 Atuação em defesa dos beneficiários do Benefício de Prestação Continuada e do acesso aos direitos assistenciais.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-400">
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
               <span>Compromisso com MG</span>
-              <span class="text-[#0B2B60] font-extrabold">1078</span>
+              <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-black">1078</span>
             </div>
           </div>
 
           <!-- CARD 3 -->
-          <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="bg-white border-2 border-slate-200 hover:border-amber-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-5">
-                <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0B2B60]">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#0B2B60]">
                   <i data-lucide="file-search" class="w-6 h-6"></i>
                 </div>
-                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">Pauta 03</span>
+                <span class="text-xs font-extrabold text-[#0B2B60] bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">Pauta 03</span>
               </div>
-              <span class="text-[11px] font-bold uppercase tracking-wider text-[#0284C7] block mb-1">Fiscalização e Direitos</span>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0B2B60] transition-colors">DEFESA PREVIDENCIÁRIA</h3>
+              <span class="text-[11px] font-black uppercase tracking-wider text-amber-700 block mb-1">Fiscalização e Direitos</span>
+              <h3 class="font-display text-xl font-extrabold text-[#0B2B60] mb-3 group-hover:text-amber-600 transition-colors">DEFESA PREVIDENCIÁRIA</h3>
               <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                 Defesa dos beneficiários e fiscalização de possíveis irregularidades e descontos indevidos relacionados aos benefícios do INSS.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-400">
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
               <span>Compromisso com MG</span>
-              <span class="text-[#0B2B60] font-extrabold">1078</span>
+              <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-black">1078</span>
             </div>
           </div>
 
           <!-- CARD 4 -->
-          <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="bg-white border-2 border-slate-200 hover:border-amber-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-5">
-                <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0B2B60]">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#0B2B60]">
                   <i data-lucide="users" class="w-6 h-6"></i>
                 </div>
-                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">Pauta 04</span>
+                <span class="text-xs font-extrabold text-[#0B2B60] bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">Pauta 04</span>
               </div>
-              <span class="text-[11px] font-bold uppercase tracking-wider text-[#0284C7] block mb-1">Cidadania e Acesso</span>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0B2B60] transition-colors">DIREITOS DOS BENEFICIÁRIOS</h3>
+              <span class="text-[11px] font-black uppercase tracking-wider text-amber-700 block mb-1">Cidadania e Acesso</span>
+              <h3 class="font-display text-xl font-extrabold text-[#0B2B60] mb-3 group-hover:text-amber-600 transition-colors">DIREITOS DOS BENEFICIÁRIOS</h3>
               <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                 Defesa do acesso à informação e dos direitos de aposentados, pensionistas e beneficiários.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-400">
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
               <span>Compromisso com MG</span>
-              <span class="text-[#0B2B60] font-extrabold">1078</span>
+              <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-black">1078</span>
             </div>
           </div>
 
@@ -504,7 +531,7 @@
         <div class="mt-12 text-center">
           <a href="#propostas" class="btn-secondary py-3 px-6 text-sm font-bold">
             <span>VER TODAS AS PROPOSTAS</span>
-            <i data-lucide="arrow-up" class="w-4 h-4"></i>
+            <i data-lucide="arrow-up" class="w-4 h-4 text-amber-500"></i>
           </a>
         </div>
 
@@ -515,13 +542,13 @@
     <!-- SEÇÃO COMPROMISSO                          -->
     <!-- ========================================== -->
     <section class="py-20 md:py-28 bg-[#0B2B60] text-white relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl pointer-events-none"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           <div class="lg:col-span-7 flex flex-col items-start">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-200 text-xs font-bold uppercase tracking-wider mb-6">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-300"></i>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-black uppercase tracking-wider mb-6">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-amber-400"></i>
               <span>Transparência e Representatividade</span>
             </div>
             <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
@@ -531,9 +558,9 @@
               Conheça as propostas de Maycon Matos e acompanhe de perto as ideias, posicionamentos e ações apresentadas durante a campanha.
             </p>
             <div class="flex flex-wrap items-center gap-4">
-              <a href="#propostas" class="btn-white py-3.5 px-7 text-sm font-bold shadow-lg">
+              <a href="#propostas" class="btn-yellow py-3.5 px-7 text-sm font-black shadow-lg">
                 <span>CONHEÇA AS PROPOSTAS</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-[#0B2B60]"></i>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-[#061A3B]"></i>
               </a>
               <a href="#contato" class="btn-outline-white py-3.5 px-6 text-sm font-semibold">
                 <span>ACOMPANHAR AÇÕES</span>
@@ -542,15 +569,17 @@
           </div>
 
           <div class="lg:col-span-5 flex justify-center">
-            <div class="w-full max-w-md bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl text-center">
-              <div class="text-xs font-bold uppercase tracking-widest text-blue-200 mb-2">Minas Gerais • Deputado Federal</div>
+            <div class="w-full max-w-md bg-white/10 backdrop-blur-md rounded-3xl p-8 border-2 border-amber-400/40 shadow-2xl text-center">
+              <div class="text-xs font-bold uppercase tracking-widest text-amber-300 mb-2">Minas Gerais • Deputado Federal</div>
               <div class="font-display text-2xl font-black text-white mb-1">MAYCON MATOS</div>
-              <div class="inline-block bg-blue-500/30 text-blue-100 text-xs font-bold px-3 py-1 rounded-full border border-blue-400/30 mb-6">REPUBLICANOS</div>
-              <div class="my-3 py-6 px-4 bg-white text-[#0B2B60] rounded-2xl shadow-xl font-display font-black text-5xl sm:text-6xl tracking-wider">
+              <div class="inline-block bg-amber-400 text-[#061A3B] text-xs font-black px-3.5 py-1 rounded-full shadow-sm mb-6">REPUBLICANOS</div>
+              
+              <div class="my-3 py-6 px-4 bg-gradient-to-br from-amber-300 to-amber-500 text-[#061A3B] rounded-2xl shadow-xl font-display font-black text-5xl sm:text-6xl tracking-wider border-2 border-amber-200">
                 1078
               </div>
-              <button onclick="copyNumber()" class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-white hover:text-blue-200 py-2 px-4 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20">
-                <i data-lucide="copy" class="w-3.5 h-3.5 text-blue-200"></i>
+              
+              <button onclick="copyNumber()" class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-200 hover:text-white py-2 px-4 rounded-lg bg-white/10 hover:bg-white/20 border border-amber-400/30">
+                <i data-lucide="copy" class="w-3.5 h-3.5 text-amber-300"></i>
                 <span>Copiar número para votar</span>
               </button>
             </div>
@@ -567,22 +596,22 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-3xl mx-auto text-center mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0B2B60] text-xs font-bold uppercase tracking-wider mb-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
             <span>Canais Oficiais</span>
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2B60] tracking-tight mb-4">
             ACOMPANHE MAYCON MATOS
           </h2>
-          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto">
+          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto font-medium">
             Acompanhe a candidatura e tenha acesso às informações e conteúdos publicados nas redes sociais.
           </p>
-          <div class="w-16 h-1 bg-[#0B2B60] mx-auto mt-4 rounded-full"></div>
+          <div class="w-16 h-1.5 bg-amber-400 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           
           <!-- INSTAGRAM -->
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-blue-300 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-amber-400 hover:shadow-lg transition-all flex flex-col justify-between">
             <div>
               <div class="w-14 h-14 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-5 text-[#E1306C]">
                 <i data-lucide="instagram" class="w-7 h-7"></i>
@@ -591,7 +620,6 @@
               <h3 class="font-display text-lg font-bold text-slate-900 mb-2">@mayconmatos.adv</h3>
               <p class="text-xs text-slate-500 leading-relaxed mb-6">Acompanhe publicações, notícias e vídeos diários da campanha.</p>
             </div>
-            <!-- // INSERIR LINK OFICIAL -->
             <a href="#" class="w-full py-2.5 px-4 rounded-lg bg-white hover:bg-[#0B2B60] text-[#0B2B60] hover:text-white border border-slate-200 text-xs font-bold transition-all flex items-center justify-center gap-2">
               <span>Acessar Instagram</span>
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
@@ -599,7 +627,7 @@
           </div>
 
           <!-- FACEBOOK -->
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-blue-300 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-amber-400 hover:shadow-lg transition-all flex flex-col justify-between">
             <div>
               <div class="w-14 h-14 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-5 text-[#1877F2]">
                 <i data-lucide="facebook" class="w-7 h-7"></i>
@@ -608,7 +636,6 @@
               <h3 class="font-display text-lg font-bold text-slate-900 mb-2">Maycon Matos</h3>
               <p class="text-xs text-slate-500 leading-relaxed mb-6">Siga a página e participe dos debates e atualizações.</p>
             </div>
-            <!-- // INSERIR LINK OFICIAL -->
             <a href="#" class="w-full py-2.5 px-4 rounded-lg bg-white hover:bg-[#0B2B60] text-[#0B2B60] hover:text-white border border-slate-200 text-xs font-bold transition-all flex items-center justify-center gap-2">
               <span>Acessar Facebook</span>
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
@@ -616,7 +643,7 @@
           </div>
 
           <!-- YOUTUBE -->
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-blue-300 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-amber-400 hover:shadow-lg transition-all flex flex-col justify-between">
             <div>
               <div class="w-14 h-14 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-5 text-[#FF0000]">
                 <i data-lucide="youtube" class="w-7 h-7"></i>
@@ -625,7 +652,6 @@
               <h3 class="font-display text-lg font-bold text-slate-900 mb-2">Maycon Matos</h3>
               <p class="text-xs text-slate-500 leading-relaxed mb-6">Assista aos posicionamentos, entrevistas e explicações de direitos.</p>
             </div>
-            <!-- // INSERIR LINK OFICIAL -->
             <a href="#" class="w-full py-2.5 px-4 rounded-lg bg-white hover:bg-[#0B2B60] text-[#0B2B60] hover:text-white border border-slate-200 text-xs font-bold transition-all flex items-center justify-center gap-2">
               <span>Acessar YouTube</span>
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
@@ -633,7 +659,7 @@
           </div>
 
           <!-- WHATSAPP -->
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-blue-300 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-amber-400 hover:shadow-lg transition-all flex flex-col justify-between">
             <div>
               <div class="w-14 h-14 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-5 text-[#25D366]">
                 <i data-lucide="message-circle" class="w-7 h-7"></i>
@@ -642,7 +668,6 @@
               <h3 class="font-display text-lg font-bold text-slate-900 mb-2">Fale com a campanha</h3>
               <p class="text-xs text-slate-500 leading-relaxed mb-6">Canal direto de comunicação, envio de sugestões e contato.</p>
             </div>
-            <!-- // INSERIR LINK OFICIAL -->
             <a href="#" class="w-full py-2.5 px-4 rounded-lg bg-white hover:bg-[#0B2B60] text-[#0B2B60] hover:text-white border border-slate-200 text-xs font-bold transition-all flex items-center justify-center gap-2">
               <span>Falar no WhatsApp</span>
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
@@ -656,20 +681,20 @@
     <!-- ========================================== -->
     <!-- CTA FINAL                                  -->
     <!-- ========================================== -->
-    <section class="py-20 md:py-24 bg-gradient-to-b from-slate-50 to-slate-100 border-t border-slate-200/90 relative">
+    <section class="py-20 md:py-24 bg-gradient-to-b from-slate-50 to-amber-50/40 border-t border-slate-200/90 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 sm:p-12 md:p-14 border border-slate-200/90 shadow-xl text-center">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0B2B60] text-xs font-extrabold uppercase tracking-widest mb-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 sm:p-12 md:p-14 border-2 border-amber-300 shadow-xl text-center">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-widest mb-6">
             <span>REPUBLICANOS • MINAS GERAIS</span>
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-2">
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-[#0B2B60] tracking-tight mb-2">
             MAYCON MATOS
           </h2>
-          <div class="text-lg sm:text-xl font-bold text-[#0B2B60] mb-6">
+          <div class="text-lg sm:text-xl font-bold text-slate-700 mb-6">
             Deputado Federal por Minas Gerais
           </div>
           <div class="inline-block my-2">
-            <div class="bg-[#0B2B60] text-white px-8 py-3 rounded-2xl font-display font-black text-4xl sm:text-5xl tracking-wider shadow-lg">
+            <div class="bg-[#0B2B60] text-amber-400 px-8 py-3 rounded-2xl font-display font-black text-4xl sm:text-5xl tracking-wider shadow-lg border-2 border-amber-400/40">
               1078
             </div>
           </div>
@@ -677,9 +702,9 @@
             "Conheça as propostas e acompanhe a candidatura."
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#propostas" class="btn-primary w-full sm:w-auto py-3.5 px-7 text-sm font-bold">
+            <a href="#propostas" class="btn-yellow w-full sm:w-auto py-3.5 px-7 text-sm font-black">
               <span>CONHEÇA AS PROPOSTAS</span>
-              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-[#061A3B]"></i>
             </a>
             <a href="#contato" class="btn-secondary w-full sm:w-auto py-3.5 px-7 text-sm font-bold">
               <i data-lucide="message-square" class="w-4 h-4 text-[#0B2B60]"></i>
@@ -694,23 +719,23 @@
   <!-- ========================================== -->
   <!-- FOOTER                                     -->
   <!-- ========================================== -->
-  <footer class="bg-[#061A3B] text-slate-300 pt-16 pb-12 border-t border-slate-800">
+  <footer class="bg-[#061A3B] text-slate-300 pt-16 pb-12 border-t-2 border-amber-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80 items-start">
         
         <div class="md:col-span-6 flex flex-col items-start">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center font-display font-extrabold text-lg border border-white/20">
+            <div class="w-10 h-10 rounded-lg bg-[#0B2B60] text-amber-400 flex items-center justify-center font-display font-black text-lg border border-amber-400/40">
               MM
             </div>
             <div>
               <h3 class="font-display font-black text-xl text-white tracking-tight">MAYCON MATOS</h3>
-              <span class="text-xs text-blue-300 font-semibold">Candidato a Deputado Federal por Minas Gerais</span>
+              <span class="text-xs text-amber-300 font-bold">Candidato a Deputado Federal por Minas Gerais</span>
             </div>
           </div>
           <div class="flex items-center gap-2 mb-4">
-            <span class="text-xs font-bold text-slate-400 bg-white/5 px-2.5 py-1 rounded border border-white/10">REPUBLICANOS</span>
-            <span class="text-xs font-bold text-white bg-blue-600 px-3 py-1 rounded border border-blue-400">Nº 1078</span>
+            <span class="text-xs font-black text-amber-300 bg-amber-400/10 px-2.5 py-1 rounded border border-amber-400/30">REPUBLICANOS</span>
+            <span class="text-xs font-black text-[#061A3B] bg-amber-400 px-3 py-1 rounded shadow-xs">Nº 1078</span>
           </div>
           <p class="text-xs text-slate-400 max-w-md leading-relaxed">
             "Uma candidatura voltada à defesa dos direitos previdenciários e assistenciais e à representação dos mineiros."
@@ -718,27 +743,27 @@
         </div>
 
         <div class="md:col-span-3">
-          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Navegação Rápida</h4>
+          <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-4">Navegação Rápida</h4>
           <ul class="space-y-2.5 text-sm list-none p-0 m-0">
-            <li><a href="#inicio" class="text-slate-400 hover:text-white transition-colors">Início</a></li>
-            <li><a href="#sobre" class="text-slate-400 hover:text-white transition-colors">Sobre</a></li>
-            <li><a href="#propostas" class="text-slate-400 hover:text-white transition-colors">Propostas</a></li>
-            <li><a href="#contato" class="text-slate-400 hover:text-white transition-colors">Contato</a></li>
+            <li><a href="#inicio" class="text-slate-400 hover:text-amber-300 transition-colors">Início</a></li>
+            <li><a href="#sobre" class="text-slate-400 hover:text-amber-300 transition-colors">Sobre</a></li>
+            <li><a href="#propostas" class="text-slate-400 hover:text-amber-300 transition-colors">Propostas</a></li>
+            <li><a href="#contato" class="text-slate-400 hover:text-amber-300 transition-colors">Contato</a></li>
           </ul>
         </div>
 
         <div class="md:col-span-3 flex flex-col justify-between h-full">
           <div>
-            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Termos & Privacidade</h4>
+            <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-4">Termos & Privacidade</h4>
             <ul class="space-y-2.5 text-sm list-none p-0 m-0">
-              <li><button onclick="openModal()" class="text-slate-400 hover:text-white transition-colors text-left cursor-pointer">Política de Privacidade</button></li>
-              <li><button onclick="openModal()" class="text-slate-400 hover:text-white transition-colors text-left cursor-pointer">Política de Cookies</button></li>
+              <li><button onclick="openModal()" class="text-slate-400 hover:text-amber-300 transition-colors text-left cursor-pointer">Política de Privacidade</button></li>
+              <li><button onclick="openModal()" class="text-slate-400 hover:text-amber-300 transition-colors text-left cursor-pointer">Política de Cookies</button></li>
             </ul>
           </div>
           <div class="mt-6">
-            <a href="#inicio" class="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-white px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10">
+            <a href="#inicio" class="inline-flex items-center gap-2 text-xs font-bold text-amber-300 hover:text-white px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-amber-400/30">
               <span>Voltar ao topo</span>
-              <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+              <i data-lucide="arrow-up" class="w-3.5 h-3.5 text-amber-400"></i>
             </a>
           </div>
         </div>
@@ -746,12 +771,12 @@
       </div>
 
       <!-- ÁREA RESERVADA IDENTIFICAÇÃO ELEITORAL OBRIGATÓRIA -->
-      <div class="my-8 p-5 rounded-xl bg-white/5 border border-dashed border-slate-700 text-center">
-        <div class="inline-flex items-center gap-2 text-amber-300 text-xs font-bold uppercase tracking-wider mb-2">
-          <i data-lucide="alert-circle" class="w-4 h-4"></i>
+      <div class="my-8 p-5 rounded-xl bg-white/5 border border-dashed border-amber-400/40 text-center">
+        <div class="inline-flex items-center gap-2 text-amber-400 text-xs font-black uppercase tracking-wider mb-2">
+          <i data-lucide="alert-circle" class="w-4 h-4 text-amber-400"></i>
           <span>Conformidade Legal Eleitoral</span>
         </div>
-        <div class="text-xs font-mono text-slate-300 bg-black/30 py-2 px-3 rounded inline-block my-1">
+        <div class="text-xs font-mono text-amber-200 bg-black/40 py-2 px-3 rounded inline-block my-1 border border-amber-400/20">
           [INSERIR IDENTIFICAÇÃO ELEITORAL OBRIGATÓRIA]
         </div>
         <p class="text-[11px] text-slate-400 mt-2 max-w-2xl mx-auto">
@@ -768,7 +793,7 @@
 
   <!-- MODAL LEGAL -->
   <div id="legal-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
-    <div class="bg-white text-slate-900 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200">
+    <div class="bg-white text-slate-900 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border-2 border-amber-300">
       <div class="flex items-center justify-between pb-4 border-b border-slate-100">
         <h3 class="font-bold text-lg text-slate-900">Política de Privacidade e Termos</h3>
         <button onclick="closeModal()" class="p-1 rounded-lg text-slate-400 hover:text-slate-700">
@@ -776,13 +801,13 @@
         </button>
       </div>
       <div class="py-5 text-sm text-slate-600 space-y-3">
-        <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs font-mono text-[#0B2B60]">
+        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs font-mono text-[#0B2B60]">
           [CAMPO RESERVADO PARA INSERÇÃO DOS TERMOS OFICIAIS DE CONFORMIDADE COM A LGPD E LEGISLAÇÃO ELEITORAL]
         </div>
         <p>Este portal institucional respeita a privacidade dos visitantes e atende às exigências da LGPD e resoluções do TSE.</p>
       </div>
       <div class="pt-4 border-t border-slate-100 flex justify-end">
-        <button onclick="closeModal()" class="btn-primary py-2 px-5 text-xs font-bold">Fechar</button>
+        <button onclick="closeModal()" class="btn-yellow py-2 px-5 text-xs font-black">Fechar</button>
       </div>
     </div>
   </div>

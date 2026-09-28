@@ -12,28 +12,28 @@ export const FinalCTA: React.FC = () => {
   };
 
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-b from-slate-50 to-slate-100 border-t border-slate-200/90 relative">
+    <section className="py-20 md:py-24 bg-gradient-to-b from-slate-50 to-amber-50/40 border-t border-slate-200/90 relative">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 sm:p-12 md:p-14 border border-slate-200/90 shadow-xl text-center relative overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 sm:p-12 md:p-14 border-2 border-amber-300 shadow-xl text-center relative overflow-hidden">
           
           {/* Tag Partido */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0B2B60] text-xs font-extrabold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-widest mb-6">
             <span>{candidateData.party} • MINAS GERAIS</span>
           </div>
 
           {/* Nome do Candidato */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0B2B60] tracking-tight mb-2">
             {candidateData.finalCta.title}
           </h2>
 
           {/* Cargo */}
-          <div className="text-lg sm:text-xl font-bold text-[#0B2B60] mb-6">
+          <div className="text-lg sm:text-xl font-bold text-slate-700 mb-6">
             {candidateData.finalCta.subtitle}
           </div>
 
           {/* Badge 1078 */}
           <div className="inline-block my-2">
-            <div className="bg-[#0B2B60] text-white px-8 py-3 rounded-2xl font-display font-black text-4xl sm:text-5xl tracking-wider shadow-lg">
+            <div className="bg-[#0B2B60] text-amber-400 px-8 py-3 rounded-2xl font-display font-black text-4xl sm:text-5xl tracking-wider shadow-lg border-2 border-amber-400/40">
               {candidateData.ballotNumber}
             </div>
           </div>
@@ -48,10 +48,10 @@ export const FinalCTA: React.FC = () => {
             <a
               href="#propostas"
               onClick={(e) => handleScrollTo(e, '#propostas')}
-              className="btn-primary w-full sm:w-auto py-3.5 px-7 text-sm font-bold shadow-md hover:shadow-lg"
+              className="btn-yellow w-full sm:w-auto py-3.5 px-7 text-sm font-black shadow-md hover:shadow-lg"
             >
               <span>{candidateData.finalCta.primaryBtnText}</span>
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-4 h-4 text-[#061A3B]" />
             </a>
 
             <a

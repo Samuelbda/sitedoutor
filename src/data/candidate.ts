@@ -98,15 +98,16 @@ export interface CandidateData {
     legalLinks: { name: string; href: string }[];
   };
 
-  // Variáveis de Tema / Cores da Campanha
+  // Paleta de Cores: Azul e Amarelo da Campanha
   theme: {
-    primary: string;       // Cor principal forte da campanha
-    primaryDark: string;   // Versão escura para contrastes e cabeçalhos
-    primaryLight: string;  // Versão suave para fundos de destaque
-    accent: string;        // Cor de destaque/ação
-    partyColor: string;    // Cor representativa
-    bgLight: string;       // Fundo claro / off-white
-    cardBg: string;        // Fundo de cards
+    primaryBlue: string;      // Azul Marinho Institucional
+    primaryBlueLight: string; // Azul Real
+    primaryDark: string;      // Azul Noite
+    accentYellow: string;     // Amarelo Ouro Solar
+    yellowHover: string;      // Amarelo Ouro Escuro
+    yellowLight: string;      // Fundo suave amarelo
+    bgLight: string;          // Off-white refinado
+    cardBg: string;           // Branco puro para suporte
   };
 }
 
@@ -261,14 +262,15 @@ export const candidateData: CandidateData = {
     ]
   },
 
-  // CONFIGURAÇÃO DE CORES (facilita trocar as cores da campanha rapidamente)
+  // PALETA AZUL E AMARELO DA CAMPANHA
   theme: {
-    primary: "#0B2B60",       // Azul Marinho Institucional e Confiável
-    primaryDark: "#061A3B",   // Azul Noite Profundo
-    primaryLight: "#164A96",  // Azul Real Energético
-    accent: "#0284C7",        // Azul Céu Vibrante / Ciano de Ação
-    partyColor: "#0D47A1",    // Republicanos Blue
-    bgLight: "#F8FAFC",       // Off-white refinado
-    cardBg: "#FFFFFF"         // Branco puro para suporte
+    primaryBlue: "#0B2B60",       // Azul Marinho Oficial
+    primaryBlueLight: "#164A96",  // Azul Real Energético
+    primaryDark: "#061A3B",      // Azul Noite
+    accentYellow: "#F59E0B",     // Amarelo Ouro Solar
+    yellowHover: "#D97706",      // Amarelo Ouro Intenso
+    yellowLight: "#FEF3C7",      // Fundo suave amarelo/ouro
+    bgLight: "#F8FAFC",          // Off-white refinado
+    cardBg: "#FFFFFF"            // Branco puro para suporte
   }
 };

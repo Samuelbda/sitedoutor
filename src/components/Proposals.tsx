@@ -40,58 +40,58 @@ export const Proposals: React.FC = () => {
         
         {/* CABEÇALHO DA SEÇÃO */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-200 text-[#0B2B60] text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
             <span>Pautas e Compromissos</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2B60] tracking-tight mb-4">
             {candidateData.proposalsSection.title}
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 font-normal max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 font-medium max-w-xl mx-auto">
             {candidateData.proposalsSection.subtitle}
           </p>
-          <div className="w-16 h-1 bg-[#0B2B60] mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1.5 bg-amber-400 mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* GRID DE PROPOSTAS (RESPONSIVO: 1 col mobile, 2 col tablet/desktop) */}
+        {/* GRID DE PROPOSTAS */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {candidateData.proposalsSection.items.map((proposal) => (
             <div
               key={proposal.id}
-              className="card-modern relative bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+              className="card-modern relative bg-white border-2 border-slate-200/90 hover:border-amber-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* TOPO DO CARD: ÍCONE + NÚMERO / CATEGORIA */}
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center group-hover:bg-[#0B2B60]/10 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
                     {getProposalIcon(proposal.iconName)}
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">
+                    <span className="text-xs font-extrabold text-[#0B2B60] bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">
                       Pauta {proposal.number}
                     </span>
                   </div>
                 </div>
 
                 {/* CATEGORIA DA PAUTA */}
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0284C7] block mb-1">
+                <span className="text-[11px] font-black uppercase tracking-wider text-amber-700 block mb-1">
                   {proposal.category}
                 </span>
 
                 {/* TÍTULO DA PROPOSTA */}
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0B2B60] transition-colors">
+                <h3 className="text-xl font-extrabold text-[#0B2B60] mb-3 group-hover:text-amber-600 transition-colors">
                   {proposal.title}
                 </h3>
 
-                {/* DESCRIÇÃO FIEL AO BRIEFING */}
+                {/* DESCRIÇÃO */}
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                   {proposal.description}
                 </p>
               </div>
 
               {/* RODAPÉ DO CARD */}
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-400">
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
                 <span>Compromisso com MG</span>
-                <span className="text-[#0B2B60] font-extrabold">{candidateData.ballotNumber}</span>
+                <span className="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-black">{candidateData.ballotNumber}</span>
               </div>
             </div>
           ))}
@@ -105,7 +105,7 @@ export const Proposals: React.FC = () => {
             className="btn-secondary py-3 px-6 text-xs sm:text-sm font-bold shadow-xs hover:shadow-md"
           >
             <span>{candidateData.proposalsSection.ctaButtonText}</span>
-            <ArrowUp className="w-4 h-4" />
+            <ArrowUp className="w-4 h-4 text-amber-500" />
           </a>
         </div>
 

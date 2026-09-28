@@ -21,17 +21,17 @@ export const Commitment: React.FC = () => {
 
   return (
     <section className="py-20 md:py-28 bg-[#0B2B60] text-white relative overflow-hidden">
-      {/* Elementos Decorativos de Fundo */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Elementos Decorativos de Fundo em Ouro e Azul */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* COLUNA ESQUERDA: TEXTO E CTA */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-200 text-xs font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-3.5 h-3.5 text-blue-300" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-black uppercase tracking-wider mb-6">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
               <span>Transparência e Representatividade</span>
             </div>
 
@@ -47,10 +47,10 @@ export const Commitment: React.FC = () => {
               <a
                 href="#propostas"
                 onClick={handleScrollToProposals}
-                className="btn-white py-3.5 px-7 text-sm font-bold shadow-lg"
+                className="btn-yellow py-3.5 px-7 text-sm font-black shadow-lg"
               >
                 <span>{candidateData.commitmentSection.ctaButtonText}</span>
-                <ChevronRight className="w-4 h-4 text-[#0B2B60]" />
+                <ChevronRight className="w-4 h-4 text-[#061A3B]" />
               </a>
 
               <a
@@ -62,39 +62,39 @@ export const Commitment: React.FC = () => {
             </div>
           </div>
 
-          {/* COLUNA DIREITA: COMPOSIÇÃO VISUAL ELEGANTE COM O NÚMERO 1078 */}
+          {/* COLUNA DIREITA: COMPOSIÇÃO VISUAL ELEGANTE COM O NÚMERO 1078 EM AMARELO E AZUL */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-md bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl text-center relative">
-              <div className="text-xs font-bold uppercase tracking-widest text-blue-200 mb-2">
+            <div className="w-full max-w-md bg-white/10 backdrop-blur-md rounded-3xl p-8 border-2 border-amber-400/40 shadow-2xl text-center relative">
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-300 mb-2">
                 Minas Gerais • Deputado Federal
               </div>
 
-              <div className="text-xl font-black text-white mb-1">
+              <div className="text-2xl font-black text-white mb-1">
                 {candidateData.name}
               </div>
 
-              <div className="inline-block bg-blue-500/30 text-blue-100 text-xs font-bold px-3 py-1 rounded-full border border-blue-400/30 mb-6">
+              <div className="inline-block bg-amber-400 text-[#061A3B] text-xs font-black px-3.5 py-1 rounded-full shadow-sm mb-6">
                 {candidateData.party}
               </div>
 
-              {/* NÚMERO GIGANTE DESTACADO */}
-              <div className="my-3 py-6 px-4 bg-white text-[#0B2B60] rounded-2xl shadow-xl font-display font-black text-5xl sm:text-6xl tracking-wider">
+              {/* NÚMERO GIGANTE DESTACADO EM AMARELO OURO */}
+              <div className="my-3 py-6 px-4 bg-gradient-to-br from-amber-300 to-amber-500 text-[#061A3B] rounded-2xl shadow-xl font-display font-black text-5xl sm:text-6xl tracking-wider border-2 border-amber-200">
                 {candidateData.ballotNumber}
               </div>
 
               {/* AÇÃO DE COPIAR */}
               <button
                 onClick={handleCopyNumber}
-                className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-white hover:text-blue-200 transition-colors py-2 px-4 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 cursor-pointer"
+                className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-200 hover:text-white transition-colors py-2 px-4 rounded-lg bg-white/10 hover:bg-white/20 border border-amber-400/30 cursor-pointer"
               >
                 {copied ? (
                   <>
                     <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-300">Número 1078 copiado!</span>
+                    <span className="text-emerald-300 font-bold">Número 1078 copiado!</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="w-3.5 h-3.5 text-blue-200" />
+                    <Copy className="w-3.5 h-3.5 text-amber-300" />
                     <span>Copiar número para votar</span>
                   </>
                 )}

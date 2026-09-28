@@ -4,19 +4,21 @@
 
 /* ==========================================================================
    DESIGN SYSTEM & ESTILOS GLOBAIS - CAMPANHA MAYCON MATOS (1078)
+   PALETA OFICIAL: AZUL & AMARELO OURO
    ========================================================================== */
 
 :root {
-  /* Paleta Primária - Republicanos / Campanha Institucional */
-  --color-primary: #0B2B60;
+  /* Paleta Azul & Amarelo da Campanha */
+  --color-primary-blue: #0B2B60;
   --color-primary-dark: #061A3B;
   --color-primary-light: #164A96;
-  --color-primary-subtle: #EEF4FC;
+  --color-blue-subtle: #EEF4FC;
   
-  /* Cores de Ação e Apoio */
-  --color-accent: #0284C7;
-  --color-accent-hover: #0369A1;
-  --color-emerald: #059669;
+  /* Amarelo Ouro Solar de Destaque */
+  --color-yellow: #F59E0B;
+  --color-yellow-hover: #D97706;
+  --color-yellow-light: #FEF3C7;
+  --color-yellow-border: #FDE68A;
   
   /* Superfícies e Fundos (Off-White & Branco) */
   --color-bg-base: #F8FAFC;
@@ -29,14 +31,13 @@
   --color-text-muted: #475569;
   --color-text-subtle: #64748B;
   --color-border: #E2E8F0;
-  --color-border-focus: #0B2B60;
   
   /* Sombras Suaves */
   --shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.07), 0 2px 4px -2px rgb(15 23 42 / 0.05);
   --shadow-lg: 0 10px 15px -3px rgb(15 23 42 / 0.08), 0 4px 6px -4px rgb(15 23 42 / 0.04);
   --shadow-xl: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.04);
-  --shadow-glow: 0 0 25px rgba(11, 43, 96, 0.15);
+  --shadow-yellow: 0 4px 14px rgba(245, 158, 11, 0.35);
 
   /* Raio de Borda Discreto */
   --radius-sm: 8px;
@@ -79,12 +80,12 @@ h1, h2, h3, h4, .font-display {
 
 /* Acessibilidade de Foco */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-yellow);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
-/* Container Responsivo Padrão */
+/* Container Responsivo */
 .container-custom {
   width: 100%;
   max-width: 1240px;
@@ -108,20 +109,20 @@ h1, h2, h3, h4, .font-display {
   }
 }
 
-/* Botões do Sistema de Design */
+/* Botões da Campanha */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-blue);
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.01em;
   padding: 0.85rem 1.75rem;
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-primary-blue);
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 14px rgba(11, 43, 96, 0.25);
@@ -135,8 +136,31 @@ h1, h2, h3, h4, .font-display {
   box-shadow: 0 6px 20px rgba(11, 43, 96, 0.35);
 }
 
-.btn-primary:active {
-  transform: translateY(0);
+.btn-yellow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #F59E0B;
+  color: #061A3B;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid #F59E0B;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  cursor: pointer;
+}
+
+.btn-yellow:hover {
+  background-color: #D97706;
+  border-color: #D97706;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
 }
 
 .btn-secondary {
@@ -145,8 +169,8 @@ h1, h2, h3, h4, .font-display {
   justify-content: center;
   gap: 0.5rem;
   background-color: var(--color-surface);
-  color: var(--color-primary);
-  font-weight: 600;
+  color: var(--color-primary-blue);
+  font-weight: 700;
   font-size: 0.95rem;
   padding: 0.85rem 1.75rem;
   border-radius: var(--radius-md);
@@ -158,14 +182,10 @@ h1, h2, h3, h4, .font-display {
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-primary);
-  background-color: var(--color-primary-subtle);
+  border-color: var(--color-primary-blue);
+  background-color: var(--color-blue-subtle);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-}
-
-.btn-secondary:active {
-  transform: translateY(0);
 }
 
 .btn-white {
@@ -174,20 +194,21 @@ h1, h2, h3, h4, .font-display {
   justify-content: center;
   gap: 0.5rem;
   background-color: #FFFFFF;
-  color: var(--color-primary);
-  font-weight: 700;
+  color: var(--color-primary-blue);
+  font-weight: 800;
   font-size: 0.95rem;
   padding: 0.85rem 1.75rem;
   border-radius: var(--radius-md);
   border: 1px solid #FFFFFF;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
 .btn-white:hover {
-  background-color: #F8FAFC;
+  background-color: #FEF3C7;
+  color: #061A3B;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -205,36 +226,15 @@ h1, h2, h3, h4, .font-display {
   border-radius: var(--radius-md);
   border: 1.5px solid rgba(255, 255, 255, 0.4);
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s;
   cursor: pointer;
 }
 
 .btn-outline-white:hover {
-  border-color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #F59E0B;
+  color: #FDE68A;
+  background-color: rgba(245, 158, 11, 0.1);
   transform: translateY(-2px);
-}
-
-/* Badge de Votação (1078) */
-.ballot-badge {
-  display: inline-flex;
-  align-items: center;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  color: #FFFFFF;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-md);
-  font-family: var(--font-display);
-  font-weight: 800;
-  box-shadow: 0 4px 12px rgba(11, 43, 96, 0.2);
-}
-
-.ballot-badge-lg {
-  padding: 0.6rem 1.5rem;
-  font-size: 2.25rem;
-  letter-spacing: 0.05em;
-  border-radius: var(--radius-lg);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 24px rgba(11, 43, 96, 0.3);
 }
 
 /* Cards Modernos */
@@ -251,11 +251,11 @@ h1, h2, h3, h4, .font-display {
 
 .card-modern:hover {
   transform: translateY(-4px);
-  border-color: rgba(11, 43, 96, 0.25);
+  border-color: rgba(245, 158, 11, 0.4);
   box-shadow: var(--shadow-lg);
 }
 
-/* Animações Sutis */
+/* Animações */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -278,14 +278,4 @@ h1, h2, h3, h4, .font-display {
 
 .animate-slide-up {
   animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* Respeito à preferência de menos movimento */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
