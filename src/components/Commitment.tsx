@@ -21,8 +21,8 @@ export const Commitment: React.FC = () => {
 
   return (
     <section className="py-20 md:py-28 bg-[#0B2B60] text-white relative overflow-hidden">
-      {/* Elementos Decorativos de Fundo em Ouro e Azul */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl pointer-events-none" />
+      {/* Elementos Decorativos de Fundo em Amarelo Claro e Azul */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-300/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
@@ -30,8 +30,8 @@ export const Commitment: React.FC = () => {
           
           {/* COLUNA ESQUERDA: TEXTO E CTA */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-black uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-300/20 border border-yellow-300/40 text-yellow-300 text-xs font-black uppercase tracking-wider mb-6">
+              <ShieldCheck className="w-3.5 h-3.5 text-yellow-300" />
               <span>Transparência e Representatividade</span>
             </div>
 
@@ -62,10 +62,10 @@ export const Commitment: React.FC = () => {
             </div>
           </div>
 
-          {/* COLUNA DIREITA: COMPOSIÇÃO VISUAL ELEGANTE COM O NÚMERO 1078 EM AMARELO E AZUL */}
+          {/* COLUNA DIREITA: COMPOSIÇÃO VISUAL ELEGANTE COM O NÚMERO 1078 EM AMARELO CLARO */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-md bg-white/10 backdrop-blur-md rounded-3xl p-8 border-2 border-amber-400/40 shadow-2xl text-center relative">
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-300 mb-2">
+            <div className="w-full max-w-md bg-white/10 backdrop-blur-md rounded-3xl p-8 border-2 border-yellow-300/40 shadow-2xl text-center relative">
+              <div className="text-xs font-bold uppercase tracking-widest text-yellow-300 mb-2">
                 Minas Gerais • Deputado Federal
               </div>
 
@@ -73,19 +73,19 @@ export const Commitment: React.FC = () => {
                 {candidateData.name}
               </div>
 
-              <div className="inline-block bg-amber-400 text-[#061A3B] text-xs font-black px-3.5 py-1 rounded-full shadow-sm mb-6">
+              <div className="inline-block bg-yellow-300 text-[#061A3B] text-xs font-black px-3.5 py-1 rounded-full shadow-sm mb-6">
                 {candidateData.party}
               </div>
 
-              {/* NÚMERO GIGANTE DESTACADO EM AMARELO OURO */}
-              <div className="my-3 py-6 px-4 bg-gradient-to-br from-amber-300 to-amber-500 text-[#061A3B] rounded-2xl shadow-xl font-display font-black text-5xl sm:text-6xl tracking-wider border-2 border-amber-200">
+              {/* NÚMERO GIGANTE DESTACADO EM AMARELO CLARO */}
+              <div className="my-3 py-6 px-4 bg-gradient-to-br from-yellow-200 via-yellow-300 to-yellow-400 text-[#061A3B] rounded-2xl shadow-xl font-display font-black text-5xl sm:text-6xl tracking-wider border-2 border-yellow-100">
                 {candidateData.ballotNumber}
               </div>
 
               {/* AÇÃO DE COPIAR */}
               <button
                 onClick={handleCopyNumber}
-                className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-200 hover:text-white transition-colors py-2 px-4 rounded-lg bg-white/10 hover:bg-white/20 border border-amber-400/30 cursor-pointer"
+                className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-yellow-200 hover:text-white transition-colors py-2 px-4 rounded-lg bg-white/10 hover:bg-white/20 border border-yellow-300/30 cursor-pointer"
               >
                 {copied ? (
                   <>
@@ -94,7 +94,7 @@ export const Commitment: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    <Copy className="w-3.5 h-3.5 text-amber-300" />
+                    <Copy className="w-3.5 h-3.5 text-yellow-300" />
                     <span>Copiar número para votar</span>
                   </>
                 )}

@@ -14,17 +14,17 @@ export const About: React.FC = () => {
   const getIconForLabel = (label: string) => {
     switch (label.toUpperCase()) {
       case 'NOME':
-        return <User className="w-4 h-4 text-amber-500" />;
+        return <User className="w-4 h-4 text-yellow-500" />;
       case 'PROFISSÃO':
-        return <Briefcase className="w-4 h-4 text-amber-500" />;
+        return <Briefcase className="w-4 h-4 text-yellow-500" />;
       case 'NATURALIDADE':
-        return <MapPin className="w-4 h-4 text-amber-500" />;
+        return <MapPin className="w-4 h-4 text-yellow-500" />;
       case 'CARGO':
-        return <Award className="w-4 h-4 text-amber-500" />;
+        return <Award className="w-4 h-4 text-yellow-500" />;
       case 'PARTIDO':
-        return <Flag className="w-4 h-4 text-amber-500" />;
+        return <Flag className="w-4 h-4 text-yellow-500" />;
       default:
-        return <CheckCircle2 className="w-4 h-4 text-amber-500" />;
+        return <CheckCircle2 className="w-4 h-4 text-yellow-500" />;
     }
   };
 
@@ -34,13 +34,13 @@ export const About: React.FC = () => {
         
         {/* CABEÇALHO DA SEÇÃO */}
         <div className="max-w-3xl mx-auto text-center mb-14 md:mb-18">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 border border-yellow-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
             <span>Trajetória e Perfil</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2B60] tracking-tight">
             {candidateData.about.title}
           </h2>
-          <div className="w-16 h-1.5 bg-amber-400 mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1.5 bg-yellow-300 mx-auto mt-4 rounded-full" />
         </div>
 
         {/* LAYOUT CONTEÚDO */}
@@ -49,14 +49,14 @@ export const About: React.FC = () => {
           {/* FOTO SECUNDÁRIA / CARD VISUAL */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-sm lg:max-w-none">
-              <div className="bg-slate-50 p-4 rounded-2xl border-2 border-amber-200 shadow-md">
+              <div className="bg-slate-50 p-4 rounded-2xl border-2 border-yellow-300 shadow-md">
                 <img
                   src={candidateData.photoUrl}
                   alt={`${candidateData.fullName} - ${candidateData.profession}`}
                   className="w-full h-80 sm:h-96 object-cover object-top rounded-xl"
                   loading="lazy"
                 />
-                <div className="mt-4 p-3.5 bg-white rounded-xl border border-amber-200 text-center">
+                <div className="mt-4 p-3.5 bg-white rounded-xl border border-yellow-200 text-center">
                   <span className="font-display font-extrabold text-[#0B2B60] text-base block">
                     {candidateData.fullName}
                   </span>
@@ -83,14 +83,14 @@ export const About: React.FC = () => {
 
             {/* ÁREA DE INFORMAÇÕES RÁPIDAS */}
             <div className="w-full mb-8">
-              <h3 className="text-xs font-black text-amber-700 uppercase tracking-wider mb-3">
+              <h3 className="text-xs font-black text-yellow-800 uppercase tracking-wider mb-3">
                 Informações Institucionais
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {candidateData.about.quickInfo.map((info) => (
                   <div
                     key={info.label}
-                    className="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:border-amber-300 transition-colors"
+                    className="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:border-yellow-300 transition-colors"
                   >
                     <div className="flex items-center gap-2 mb-1">
                       {getIconForLabel(info.label)}
@@ -113,7 +113,7 @@ export const About: React.FC = () => {
               className="btn-yellow py-3 px-6 text-sm font-black"
             >
               <span>CONHEÇA AS PROPOSTAS</span>
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-4 h-4 text-[#061A3B]" />
             </a>
 
           </div>

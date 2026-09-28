@@ -19,33 +19,33 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-[#061A3B] text-slate-300 pt-16 pb-12 border-t-2 border-amber-400">
+      <footer className="bg-[#061A3B] text-slate-300 pt-16 pb-12 border-t-2 border-yellow-400">
         <div className="container-custom">
           
-          {/* TOPO DO FOOTER: IDENTIFICAÇÃO E NAVEGAÇÃO */}
+          {/* TOPO DO FOOTER */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80 items-start">
             
-            {/* Coluna 1: Nome, Partido, Número */}
+            {/* Coluna 1 */}
             <div className="md:col-span-6 flex flex-col items-start">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-[#0B2B60] text-amber-400 flex items-center justify-center font-display font-black text-lg border border-amber-400/40">
+                <div className="w-10 h-10 rounded-lg bg-[#0B2B60] text-yellow-300 flex items-center justify-center font-display font-black text-lg border border-yellow-300/50">
                   MM
                 </div>
                 <div>
                   <h3 className="font-display font-black text-xl text-white tracking-tight">
                     {candidateData.name}
                   </h3>
-                  <span className="text-xs text-amber-300 font-bold">
+                  <span className="text-xs text-yellow-300 font-bold">
                     {candidateData.roleTitle} por {candidateData.stateFull}
                   </span>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-xs font-black text-amber-300 bg-amber-400/10 px-2.5 py-1 rounded border border-amber-400/30">
+                <span className="text-xs font-black text-yellow-300 bg-yellow-400/15 px-2.5 py-1 rounded border border-yellow-400/30">
                   {candidateData.party}
                 </span>
-                <span className="text-xs font-black text-[#061A3B] bg-amber-400 px-3 py-1 rounded shadow-xs">
+                <span className="text-xs font-black text-[#061A3B] bg-yellow-400 px-3 py-1 rounded shadow-xs">
                   Nº {candidateData.ballotNumber}
                 </span>
               </div>
@@ -55,9 +55,9 @@ export const Footer: React.FC = () => {
               </p>
             </div>
 
-            {/* Coluna 2: Links de Navegação */}
+            {/* Coluna 2 */}
             <div className="md:col-span-3">
-              <h4 className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-4">
+              <h4 className="text-xs font-bold text-yellow-300 uppercase tracking-wider mb-4">
                 Navegação Rápida
               </h4>
               <ul className="space-y-2.5 text-sm list-none p-0 m-0">
@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
                     <a
                       href={link.href}
                       onClick={(e) => handleScrollTo(e, link.href)}
-                      className="text-slate-400 hover:text-amber-300 transition-colors"
+                      className="text-slate-400 hover:text-yellow-300 transition-colors"
                     >
                       {link.name}
                     </a>
@@ -75,17 +75,17 @@ export const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Coluna 3: Políticas e Voltar ao Topo */}
+            {/* Coluna 3 */}
             <div className="md:col-span-3 flex flex-col justify-between h-full">
               <div>
-                <h4 className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-4">
+                <h4 className="text-xs font-bold text-yellow-300 uppercase tracking-wider mb-4">
                   Termos & Privacidade
                 </h4>
                 <ul className="space-y-2.5 text-sm list-none p-0 m-0">
                   <li>
                     <button
                       onClick={() => setActiveModal('privacy')}
-                      className="text-slate-400 hover:text-amber-300 transition-colors text-left cursor-pointer"
+                      className="text-slate-400 hover:text-yellow-300 transition-colors text-left cursor-pointer"
                     >
                       Política de Privacidade
                     </button>
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
                   <li>
                     <button
                       onClick={() => setActiveModal('cookies')}
-                      className="text-slate-400 hover:text-amber-300 transition-colors text-left cursor-pointer"
+                      className="text-slate-400 hover:text-yellow-300 transition-colors text-left cursor-pointer"
                     >
                       Política de Cookies
                     </button>
@@ -104,25 +104,25 @@ export const Footer: React.FC = () => {
               <div className="mt-6">
                 <button
                   onClick={scrollToTop}
-                  className="inline-flex items-center gap-2 text-xs font-bold text-amber-300 hover:text-white transition-colors px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-amber-400/30 cursor-pointer"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-yellow-300 hover:text-white transition-colors px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-yellow-300/30 cursor-pointer"
                   title="Voltar ao início da página"
                 >
                   <span>Voltar ao topo</span>
-                  <ArrowUp className="w-3.5 h-3.5 text-amber-400" />
+                  <ArrowUp className="w-3.5 h-3.5 text-yellow-300" />
                 </button>
               </div>
             </div>
 
           </div>
 
-          {/* ÁREA RESERVADA PARA IDENTIFICAÇÃO ELEITORAL OBRIGATÓRIA */}
-          <div className="my-8 p-5 rounded-xl bg-white/5 border border-dashed border-amber-400/40 text-center">
-            <div className="inline-flex items-center gap-2 text-amber-400 text-xs font-black uppercase tracking-wider mb-2">
-              <AlertCircle className="w-4 h-4 text-amber-400" />
+          {/* ÁREA RESERVADA */}
+          <div className="my-8 p-5 rounded-xl bg-white/5 border border-dashed border-yellow-300/40 text-center">
+            <div className="inline-flex items-center gap-2 text-yellow-300 text-xs font-black uppercase tracking-wider mb-2">
+              <AlertCircle className="w-4 h-4 text-yellow-300" />
               <span>Conformidade Legal Eleitoral</span>
             </div>
             
-            <div className="text-xs font-mono text-amber-200 bg-black/40 py-2 px-3 rounded inline-block max-w-full my-1 border border-amber-400/20">
+            <div className="text-xs font-mono text-yellow-200 bg-black/40 py-2 px-3 rounded inline-block max-w-full my-1 border border-yellow-300/30">
               {candidateData.footer.legalPlaceholder}
             </div>
 
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
           {/* COPYRIGHT */}
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
             <div className="flex items-center gap-2">
-              <Shield className="w-3.5 h-3.5 text-amber-400" />
+              <Shield className="w-3.5 h-3.5 text-yellow-300" />
               <span>{candidateData.footer.copyrightText}</span>
             </div>
             <span>Desenvolvido com padrão institucional e acessibilidade.</span>
@@ -143,10 +143,10 @@ export const Footer: React.FC = () => {
         </div>
       </footer>
 
-      {/* MODAL DE POLÍTICA DE PRIVACIDADE / COOKIES */}
+      {/* MODAL LEGAL */}
       {activeModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs animate-fade-in">
-          <div className="bg-white text-slate-900 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border-2 border-amber-300 relative animate-slide-up">
+          <div className="bg-white text-slate-900 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border-2 border-yellow-300 relative animate-slide-up">
             <div className="flex items-center justify-between pb-4 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <Lock className="w-5 h-5 text-[#0B2B60]" />
@@ -164,7 +164,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="py-5 text-sm text-slate-600 space-y-3 max-h-80 overflow-y-auto">
-              <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs font-mono text-[#0B2B60]">
+              <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-xs font-mono text-[#0B2B60]">
                 [CAMPO RESERVADO PARA INSERÇÃO DOS TERMOS OFICIAIS DE CONFORMIDADE COM A LGPD E LEGISLAÇÃO ELEITORAL]
               </div>
               <p>

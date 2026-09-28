@@ -4,21 +4,21 @@
 
 /* ==========================================================================
    DESIGN SYSTEM & ESTILOS GLOBAIS - CAMPANHA MAYCON MATOS (1078)
-   PALETA OFICIAL: AZUL & AMARELO OURO
+   PALETA OFICIAL: AZUL & AMARELO CLARO LUMINOSO
    ========================================================================== */
 
 :root {
-  /* Paleta Azul & Amarelo da Campanha */
+  /* Paleta Azul & Amarelo Claro da Campanha */
   --color-primary-blue: #0B2B60;
   --color-primary-dark: #061A3B;
   --color-primary-light: #164A96;
   --color-blue-subtle: #EEF4FC;
   
-  /* Amarelo Ouro Solar de Destaque */
-  --color-yellow: #F59E0B;
-  --color-yellow-hover: #D97706;
-  --color-yellow-light: #FEF3C7;
-  --color-yellow-border: #FDE68A;
+  /* Amarelo Claro Solar Vibrante */
+  --color-yellow: #FACC15;
+  --color-yellow-hover: #EAB308;
+  --color-yellow-light: #FEF9C3;
+  --color-yellow-border: #FEF08A;
   
   /* Superfícies e Fundos (Off-White & Branco) */
   --color-bg-base: #F8FAFC;
@@ -37,7 +37,7 @@
   --shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.07), 0 2px 4px -2px rgb(15 23 42 / 0.05);
   --shadow-lg: 0 10px 15px -3px rgb(15 23 42 / 0.08), 0 4px 6px -4px rgb(15 23 42 / 0.04);
   --shadow-xl: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.04);
-  --shadow-yellow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  --shadow-yellow: 0 4px 14px rgba(250, 204, 21, 0.35);
 
   /* Raio de Borda Discreto */
   --radius-sm: 8px;
@@ -141,26 +141,26 @@ h1, h2, h3, h4, .font-display {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #F59E0B;
+  background-color: #FACC15;
   color: #061A3B;
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: 0.01em;
   padding: 0.85rem 1.75rem;
   border-radius: var(--radius-md);
-  border: 1px solid #F59E0B;
+  border: 1px solid #FACC15;
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 4px 14px rgba(250, 204, 21, 0.35);
   cursor: pointer;
 }
 
 .btn-yellow:hover {
-  background-color: #D97706;
-  border-color: #D97706;
-  color: #FFFFFF;
+  background-color: #EAB308;
+  border-color: #EAB308;
+  color: #061A3B;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
+  box-shadow: 0 6px 20px rgba(234, 179, 8, 0.45);
 }
 
 .btn-secondary {
@@ -207,7 +207,7 @@ h1, h2, h3, h4, .font-display {
 }
 
 .btn-white:hover {
-  background-color: #FEF3C7;
+  background-color: #FEF9C3;
   color: #061A3B;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -231,9 +231,9 @@ h1, h2, h3, h4, .font-display {
 }
 
 .btn-outline-white:hover {
-  border-color: #F59E0B;
-  color: #FDE68A;
-  background-color: rgba(245, 158, 11, 0.1);
+  border-color: #FACC15;
+  color: #FEF08A;
+  background-color: rgba(250, 204, 21, 0.12);
   transform: translateY(-2px);
 }
 
@@ -251,7 +251,7 @@ h1, h2, h3, h4, .font-display {
 
 .card-modern:hover {
   transform: translateY(-4px);
-  border-color: rgba(245, 158, 11, 0.4);
+  border-color: rgba(250, 204, 21, 0.6);
   box-shadow: var(--shadow-lg);
 }
 

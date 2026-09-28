@@ -98,14 +98,14 @@ export interface CandidateData {
     legalLinks: { name: string; href: string }[];
   };
 
-  // Paleta de Cores: Azul e Amarelo da Campanha
+  // Paleta de Cores: Azul e Amarelo Claro Vibrante
   theme: {
-    primaryBlue: string;      // Azul Marinho Institucional
+    primaryBlue: string;      // Azul Marinho Oficial
     primaryBlueLight: string; // Azul Real
     primaryDark: string;      // Azul Noite
-    accentYellow: string;     // Amarelo Ouro Solar
-    yellowHover: string;      // Amarelo Ouro Escuro
-    yellowLight: string;      // Fundo suave amarelo
+    accentYellow: string;     // Amarelo Claro Solar Vibrante
+    yellowHover: string;      // Amarelo Médio Hover
+    yellowLight: string;      // Fundo suave amarelo claro
     bgLight: string;          // Off-white refinado
     cardBg: string;           // Branco puro para suporte
   };
@@ -198,7 +198,7 @@ export const candidateData: CandidateData = {
         handle: "@mayconmatos.adv",
         description: "Acompanhe publicações, notícias e vídeos diários da campanha.",
         icon: "Instagram",
-        // INSERIR LINK OFICIAL: altere a URL abaixo quando o link direto estiver disponível
+        // INSERIR LINK OFICIAL
         url: "#",
         actionText: "Acessar Instagram"
       },
@@ -208,7 +208,7 @@ export const candidateData: CandidateData = {
         handle: "Maycon Matos",
         description: "Siga a página e participe dos debates e atualizações.",
         icon: "Facebook",
-        // INSERIR LINK OFICIAL: altere a URL abaixo quando o link direto estiver disponível
+        // INSERIR LINK OFICIAL
         url: "#",
         actionText: "Acessar Facebook"
       },
@@ -218,7 +218,7 @@ export const candidateData: CandidateData = {
         handle: "Maycon Matos",
         description: "Assista aos posicionamentos, entrevistas e explicações de direitos.",
         icon: "Youtube",
-        // INSERIR LINK OFICIAL: altere a URL abaixo quando o link direto estiver disponível
+        // INSERIR LINK OFICIAL
         url: "#",
         actionText: "Acessar YouTube"
       },
@@ -228,7 +228,7 @@ export const candidateData: CandidateData = {
         handle: "Fale com a campanha",
         description: "Canal direto de comunicação, envio de sugestões e contato.",
         icon: "MessageCircle",
-        // INSERIR LINK OFICIAL: altere a URL abaixo quando o número de atendimento estiver ativo
+        // INSERIR LINK OFICIAL
         url: "#",
         actionText: "Falar no WhatsApp"
       }
@@ -246,7 +246,6 @@ export const candidateData: CandidateData = {
 
   // FOOTER E IDENTIFICAÇÃO ELEITORAL
   footer: {
-    // IMPORTANTE: Campo reservado para inclusão das informações exigidas pela Justiça Eleitoral
     legalPlaceholder: "[INSERIR IDENTIFICAÇÃO ELEITORAL OBRIGATÓRIA]",
     electoralInfo: "Propaganda Eleitoral na Internet • Resoluções vigentes do Tribunal Superior Eleitoral (TSE)",
     copyrightText: "Maycon Matos — Candidato a Deputado Federal por Minas Gerais. Todos os direitos reservados.",
@@ -262,15 +261,15 @@ export const candidateData: CandidateData = {
     ]
   },
 
-  // PALETA AZUL E AMARELO DA CAMPANHA
+  // PALETA AZUL E AMARELO CLARO LUMINOSO
   theme: {
     primaryBlue: "#0B2B60",       // Azul Marinho Oficial
     primaryBlueLight: "#164A96",  // Azul Real Energético
     primaryDark: "#061A3B",      // Azul Noite
-    accentYellow: "#F59E0B",     // Amarelo Ouro Solar
-    yellowHover: "#D97706",      // Amarelo Ouro Intenso
-    yellowLight: "#FEF3C7",      // Fundo suave amarelo/ouro
+    accentYellow: "#FACC15",     // Amarelo Claro Solar (Yellow 400)
+    yellowHover: "#EAB308",      // Amarelo Médio (Yellow 500)
+    yellowLight: "#FEF9C3",      // Fundo suave amarelo claro (Yellow 100)
     bgLight: "#F8FAFC",          // Off-white refinado
-    cardBg: "#FFFFFF"            // Branco puro para suporte
+    cardBg: "#FFFFFF"            // Branco puro
   }
 };

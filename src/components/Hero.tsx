@@ -25,8 +25,8 @@ export const Hero: React.FC = () => {
       id="inicio"
       className="relative pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28 bg-[#F8FAFC] overflow-hidden"
     >
-      {/* Background Decor Elements - Blue & Yellow Glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200/30 rounded-full blur-3xl -z-10 pointer-events-none" />
+      {/* Background Decor Elements - Lighter Yellow Glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-200/40 rounded-full blur-3xl -z-10 pointer-events-none" />
       <div className="absolute bottom-10 left-0 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       <div className="container-custom">
@@ -36,8 +36,8 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* TAG SUPERIOR: PARTIDO & ESTADO */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-amber-300 shadow-xs mb-6 animate-fade-in">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-yellow-300 shadow-xs mb-6 animate-fade-in">
+              <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
               <span className="text-xs font-black text-[#0B2B60] tracking-wide uppercase">
                 {candidateData.party}
               </span>
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
             <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0B2B60] mb-6 flex flex-wrap items-center gap-2">
               <span>{candidateData.roleTitle}</span>
               <span className="text-slate-400 font-light">por</span>
-              <span className="text-slate-900 underline decoration-amber-400 decoration-4 underline-offset-6">
+              <span className="text-slate-900 underline decoration-yellow-400 decoration-4 underline-offset-6">
                 {candidateData.stateFull}
               </span>
             </div>
@@ -66,18 +66,18 @@ export const Hero: React.FC = () => {
               "{candidateData.tagline}"
             </p>
 
-            {/* DESTAQUE VISUAL DO NÚMERO 1078 (AZUL & AMARELO OURO) */}
-            <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-white rounded-2xl border-2 border-amber-300/80 shadow-md mb-8">
+            {/* DESTAQUE VISUAL DO NÚMERO 1078 (AZUL & AMARELO CLARO) */}
+            <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-white rounded-2xl border-2 border-yellow-300 shadow-md mb-8">
               <div className="flex items-center gap-3">
                 <div className="flex flex-col">
-                  <span className="text-[11px] font-extrabold text-amber-700 uppercase tracking-wider">
+                  <span className="text-[11px] font-extrabold text-yellow-800 uppercase tracking-wider">
                     Número de Urna
                   </span>
                   <span className="text-xs font-black text-[#0B2B60]">
                     {candidateData.party}
                   </span>
                 </div>
-                <div className="bg-[#0B2B60] text-amber-400 px-5 py-2 rounded-xl font-display font-black text-3xl sm:text-4xl tracking-wider shadow-inner border border-amber-400/40">
+                <div className="bg-[#0B2B60] text-yellow-300 px-5 py-2 rounded-xl font-display font-black text-3xl sm:text-4xl tracking-wider shadow-inner border border-yellow-400/40">
                   {candidateData.ballotNumber}
                 </div>
               </div>
@@ -86,7 +86,7 @@ export const Hero: React.FC = () => {
 
               <button
                 onClick={handleCopyNumber}
-                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-[#0B2B60] border border-amber-300 text-xs font-bold transition-all cursor-pointer"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-yellow-50 hover:bg-yellow-100 text-[#0B2B60] border border-yellow-300 text-xs font-bold transition-all cursor-pointer"
                 title="Copiar número eleitoral"
               >
                 {copied ? (
@@ -96,14 +96,14 @@ export const Hero: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-amber-700" />
+                    <Copy className="w-4 h-4 text-yellow-700" />
                     <span>Copiar número</span>
                   </>
                 )}
               </button>
             </div>
 
-            {/* BOTÕES DE AÇÃO: AMARELO E AZUL */}
+            {/* BOTÕES DE AÇÃO */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
               <a
                 href="#propostas"
@@ -126,7 +126,7 @@ export const Hero: React.FC = () => {
             {/* BADGES RÁPIDAS DE CONFIANÇA */}
             <div className="mt-8 pt-6 border-t border-slate-200/80 w-full flex flex-wrap gap-4 text-xs font-bold text-slate-600">
               <div className="flex items-center gap-1.5">
-                <Shield className="w-4 h-4 text-amber-500" />
+                <Shield className="w-4 h-4 text-yellow-500" />
                 <span>Defesa Previdenciária & BPC</span>
               </div>
               <div className="flex items-center gap-1.5">
@@ -140,10 +140,10 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md">
               
-              {/* Moldura de Fundo com Amarelo e Azul */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-[#0B2B60]/20 via-amber-300/30 to-blue-200/40 rounded-3xl transform -rotate-1 -z-10" />
+              {/* Moldura de Fundo com Amarelo Claro e Azul */}
+              <div className="absolute -inset-2 bg-gradient-to-tr from-[#0B2B60]/20 via-yellow-300/40 to-blue-200/40 rounded-3xl transform -rotate-1 -z-10" />
 
-              <div className="relative bg-white p-3 rounded-2xl border-2 border-amber-300/60 shadow-xl overflow-hidden">
+              <div className="relative bg-white p-3 rounded-2xl border-2 border-yellow-300/80 shadow-xl overflow-hidden">
                 {!imgError ? (
                   <img
                     src={candidateData.photoUrl}
@@ -153,8 +153,8 @@ export const Hero: React.FC = () => {
                     loading="eager"
                   />
                 ) : (
-                  <div className="w-full h-[440px] bg-slate-100 rounded-xl flex flex-col items-center justify-center p-8 text-center border-2 border-dashed border-amber-300">
-                    <div className="w-20 h-20 rounded-full bg-[#0B2B60] text-amber-400 flex items-center justify-center font-display font-extrabold text-2xl mb-4">
+                  <div className="w-full h-[440px] bg-slate-100 rounded-xl flex flex-col items-center justify-center p-8 text-center border-2 border-dashed border-yellow-300">
+                    <div className="w-20 h-20 rounded-full bg-[#0B2B60] text-yellow-300 flex items-center justify-center font-display font-extrabold text-2xl mb-4">
                       MM
                     </div>
                     <span className="font-bold text-slate-800 text-lg">{candidateData.name}</span>
@@ -163,16 +163,16 @@ export const Hero: React.FC = () => {
                 )}
 
                 {/* Selo Flutuante sobre a Foto */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-amber-200 shadow-lg flex items-center justify-between">
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-yellow-200 shadow-lg flex items-center justify-between">
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-black text-amber-700 uppercase tracking-wider">
+                    <span className="text-[10px] font-black text-yellow-800 uppercase tracking-wider">
                       {candidateData.party}
                     </span>
                     <span className="font-extrabold text-[#0B2B60] text-sm">
                       {candidateData.fullName}
                     </span>
                   </div>
-                  <div className="bg-[#0B2B60] text-amber-400 px-3 py-1 rounded-lg font-display font-black text-base border border-amber-400/40">
+                  <div className="bg-[#0B2B60] text-yellow-300 px-3 py-1 rounded-lg font-display font-black text-base border border-yellow-400/40">
                     {candidateData.ballotNumber}
                   </div>
                 </div>
@@ -193,7 +193,7 @@ export const Hero: React.FC = () => {
             <span className="text-[11px] font-bold uppercase tracking-widest text-slate-600">
               Conheça a trajetória
             </span>
-            <div className="w-8 h-8 rounded-full border border-amber-300 bg-amber-50 shadow-xs flex items-center justify-center group-hover:bg-amber-100 transition-colors">
+            <div className="w-8 h-8 rounded-full border border-yellow-300 bg-yellow-50 shadow-xs flex items-center justify-center group-hover:bg-yellow-100 transition-colors">
               <ArrowDown className="w-4 h-4 text-[#0B2B60] group-hover:translate-y-0.5 transition-transform" />
             </div>
           </a>

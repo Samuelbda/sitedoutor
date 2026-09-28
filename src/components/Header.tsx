@@ -57,7 +57,7 @@ export const Header: React.FC = () => {
           onClick={(e) => handleNavClick(e, '#inicio')}
           className="flex items-center gap-3 group text-decoration-none"
         >
-          <div className="w-10 h-10 rounded-lg bg-[#0B2B60] text-amber-400 flex items-center justify-center font-display font-extrabold text-lg shadow-sm group-hover:bg-[#164A96] transition-colors border border-amber-400/40">
+          <div className="w-10 h-10 rounded-lg bg-[#0B2B60] text-yellow-300 flex items-center justify-center font-display font-extrabold text-lg shadow-sm group-hover:bg-[#164A96] transition-colors border border-yellow-300/50">
             MM
           </div>
           <div className="flex flex-col">
@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
               <span className="font-display font-extrabold text-lg sm:text-xl tracking-tight text-[#0B2B60] leading-none">
                 {candidateData.name}
               </span>
-              <span className="bg-amber-100 text-[#0B2B60] text-xs font-black px-2.5 py-0.5 rounded-full border border-amber-300">
+              <span className="bg-yellow-200 text-[#0B2B60] text-xs font-black px-2.5 py-0.5 rounded-full border border-yellow-300">
                 {candidateData.party}
               </span>
             </div>
@@ -83,7 +83,7 @@ export const Header: React.FC = () => {
                 <a
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-sm font-bold text-slate-700 hover:text-[#0B2B60] transition-colors tracking-wide py-1 border-b-2 border-transparent hover:border-amber-400"
+                  className="text-sm font-bold text-slate-700 hover:text-[#0B2B60] transition-colors tracking-wide py-1 border-b-2 border-transparent hover:border-yellow-400"
                 >
                   {link.label}
                 </a>
@@ -96,19 +96,19 @@ export const Header: React.FC = () => {
             onClick={handleCopyNumber}
             title="Clique para copiar o número eleitoral"
             aria-label={`Copiar número de votação ${candidateData.ballotNumber}`}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-[#0B2B60] border border-amber-300 transition-all text-xs font-black cursor-pointer shadow-xs"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-yellow-50 hover:bg-yellow-100 text-[#0B2B60] border border-yellow-300 transition-all text-xs font-black cursor-pointer shadow-xs"
           >
-            <span className="text-amber-700 font-bold">Nº</span>
+            <span className="text-yellow-700 font-bold">Nº</span>
             <span className="text-[#0B2B60] font-black text-sm">{candidateData.ballotNumber}</span>
             {copied ? (
               <Check className="w-3.5 h-3.5 text-emerald-600 ml-0.5" />
             ) : (
-              <Copy className="w-3.5 h-3.5 text-amber-700 ml-0.5" />
+              <Copy className="w-3.5 h-3.5 text-yellow-700 ml-0.5" />
             )}
             {copied && <span className="text-[10px] text-emerald-700 font-bold">Copiado!</span>}
           </button>
 
-          {/* BOTÃO DESTACADO: CONHEÇA AS PROPOSTAS */}
+          {/* BOTÃO DESTACADO: CONHEÇA AS PROPOSTAS (AMARELO CLARO) */}
           <a
             href="#propostas"
             onClick={(e) => handleNavClick(e, '#propostas')}
@@ -123,7 +123,7 @@ export const Header: React.FC = () => {
         <div className="flex items-center gap-2 lg:hidden">
           <button
             onClick={handleCopyNumber}
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-md bg-amber-100 text-[#0B2B60] border border-amber-300 text-xs font-black"
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-md bg-yellow-200 text-[#0B2B60] border border-yellow-400 text-xs font-black"
             aria-label={`Número ${candidateData.ballotNumber}`}
           >
             <span>Nº</span>
@@ -151,7 +151,7 @@ export const Header: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-amber-50 hover:text-[#0B2B60] transition-colors flex items-center justify-between"
+                  className="px-4 py-3 rounded-lg font-bold text-slate-800 hover:bg-yellow-50 hover:text-[#0B2B60] transition-colors flex items-center justify-between"
                 >
                   <span>{link.label}</span>
                   <ArrowUpRight className="w-4 h-4 text-slate-400" />
@@ -160,11 +160,11 @@ export const Header: React.FC = () => {
             </nav>
 
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-3">
-              <div className="flex items-center justify-between px-4 py-2.5 bg-amber-50 rounded-lg border border-amber-200">
+              <div className="flex items-center justify-between px-4 py-2.5 bg-yellow-50 rounded-lg border border-yellow-200">
                 <span className="text-xs text-slate-600 font-bold">VOTE DEPUTADO FEDERAL:</span>
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-black text-[#0B2B60]">{candidateData.party}</span>
-                  <span className="text-sm font-black text-[#0B2B60] bg-white px-2.5 py-0.5 rounded border border-amber-300">
+                  <span className="text-sm font-black text-[#0B2B60] bg-white px-2.5 py-0.5 rounded border border-yellow-300">
                     {candidateData.ballotNumber}
                   </span>
                 </div>

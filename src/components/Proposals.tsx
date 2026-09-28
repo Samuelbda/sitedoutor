@@ -40,7 +40,7 @@ export const Proposals: React.FC = () => {
         
         {/* CABEÇALHO DA SEÇÃO */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 border border-yellow-300 text-[#0B2B60] text-xs font-black uppercase tracking-wider mb-3">
             <span>Pautas e Compromissos</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2B60] tracking-tight mb-4">
@@ -49,7 +49,7 @@ export const Proposals: React.FC = () => {
           <p className="text-base sm:text-lg text-slate-600 font-medium max-w-xl mx-auto">
             {candidateData.proposalsSection.subtitle}
           </p>
-          <div className="w-16 h-1.5 bg-amber-400 mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1.5 bg-yellow-300 mx-auto mt-4 rounded-full" />
         </div>
 
         {/* GRID DE PROPOSTAS */}
@@ -57,28 +57,28 @@ export const Proposals: React.FC = () => {
           {candidateData.proposalsSection.items.map((proposal) => (
             <div
               key={proposal.id}
-              className="card-modern relative bg-white border-2 border-slate-200/90 hover:border-amber-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="card-modern relative bg-white border-2 border-slate-200/90 hover:border-yellow-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* TOPO DO CARD: ÍCONE + NÚMERO / CATEGORIA */}
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-yellow-50 border border-yellow-200 flex items-center justify-center group-hover:bg-yellow-100 transition-colors">
                     {getProposalIcon(proposal.iconName)}
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-extrabold text-[#0B2B60] bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">
+                    <span className="text-xs font-extrabold text-[#0B2B60] bg-yellow-100 px-2.5 py-1 rounded-full border border-yellow-300">
                       Pauta {proposal.number}
                     </span>
                   </div>
                 </div>
 
                 {/* CATEGORIA DA PAUTA */}
-                <span className="text-[11px] font-black uppercase tracking-wider text-amber-700 block mb-1">
+                <span className="text-[11px] font-black uppercase tracking-wider text-yellow-800 block mb-1">
                   {proposal.category}
                 </span>
 
                 {/* TÍTULO DA PROPOSTA */}
-                <h3 className="text-xl font-extrabold text-[#0B2B60] mb-3 group-hover:text-amber-600 transition-colors">
+                <h3 className="text-xl font-extrabold text-[#0B2B60] mb-3 group-hover:text-yellow-700 transition-colors">
                   {proposal.title}
                 </h3>
 
@@ -91,7 +91,7 @@ export const Proposals: React.FC = () => {
               {/* RODAPÉ DO CARD */}
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
                 <span>Compromisso com MG</span>
-                <span className="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-black">{candidateData.ballotNumber}</span>
+                <span className="text-yellow-800 bg-yellow-50 px-2 py-0.5 rounded border border-yellow-200 font-black">{candidateData.ballotNumber}</span>
               </div>
             </div>
           ))}
@@ -105,7 +105,7 @@ export const Proposals: React.FC = () => {
             className="btn-secondary py-3 px-6 text-xs sm:text-sm font-bold shadow-xs hover:shadow-md"
           >
             <span>{candidateData.proposalsSection.ctaButtonText}</span>
-            <ArrowUp className="w-4 h-4 text-amber-500" />
+            <ArrowUp className="w-4 h-4 text-yellow-500" />
           </a>
         </div>
 
